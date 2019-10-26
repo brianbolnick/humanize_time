@@ -16,8 +16,8 @@ opts = [
   }
 ]
 
-# 21 D 17 H
-# 19 M 37 S
+> HumanizeTime.format_seconds(23487, opts)
+# "6 H 31 M"
 ```
 
 If keys are incorrect or missing, `format_seconds/2` will use the default formatters.
