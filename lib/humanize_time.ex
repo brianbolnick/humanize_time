@@ -11,6 +11,11 @@ defmodule HumanizeTime do
         }
   @doc """
   Formatter for converting seconds to a human readable format
+
+  ## Examples
+      iex> HumanizeTime.format_seconds(23487)
+
+      "6 hr 31 min"
   """
   @spec format_seconds(integer() | float()) :: String.t()
   def format_seconds(nil), do: ""

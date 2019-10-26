@@ -1,6 +1,7 @@
 # HumanizeTime
 
-**TODO: Add description**
+## Description
+HumanizeTime is an Elixir library for converting seconds and milliseconds into more human readable strings. It allows for custom formatting and flexibility.  
 
 ## Installation
 
@@ -10,9 +11,20 @@ by adding `humanize_time` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:humanize_time, "~> 0.1.0"}
+    {:humanize_time, "~> 0.0.1"}
   ]
 end
+```
+
+## Example Usage
+Currently, all formats are fixed and will show a maximum of 2 time periods.
+
+```elixir
+> HumanizeTime.format_seconds(3600)
+# "1 hr"
+
+> HumanizeTime.format_seconds(23487)
+# "6 hr 31 min"
 ```
 
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
