@@ -67,7 +67,34 @@ defmodule HumanizeTimeTest do
 
     test "handles nil values" do
       res = HumanizeTime.format_seconds(nil)
-      assert res = ""
+      assert res == ""
+    end
+
+    test "handles custom formatters" do
+      opts = [
+        formatters: %{
+          days: fn day -> "#{day} dayz" end,
+          hours: fn hour -> "#{hour} hourz" end,
+          minutes: &"#{&1} minz",
+          seconds: fn sec -> "#{sec} secz" end
+        }
+      ]
+
+      res = HumanizeTime.format_seconds(76543, opts)
+      assert res == "21 hourz 16 minz"
+    end
+
+    test "uses default formatters when incorrect or missing formatters are provided" do
+      opts = [
+        formatters: %{
+          ds: fn day -> "#{day} dayz" end,
+          hours: fn hour -> "#{hour} hourz" end,
+          seconds: fn sec -> "#{sec} secz" end
+        }
+      ]
+
+      res = HumanizeTime.format_seconds(76543, opts)
+      assert res == "21 hourz 16 min"
     end
   end
 end
