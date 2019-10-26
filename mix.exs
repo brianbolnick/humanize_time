@@ -43,15 +43,8 @@ defmodule HumanizeTime.MixProject do
       source_url: "https://github.com/brianbolnick/humanize_time",
       extras: [
         "CHANGELOG.md",
-        "docs/Getting Started.md"
-        # "docs/Basic Usage.md",
-        # "docs/Erlang Interop.md",
-        # "docs/Formatting.md",
-        # "docs/Parsing.md",
-        # "docs/FAQ.md",
-        # "docs/Using with Ecto.md",
-        # "docs/Custom Parsers.md",
-        # "docs/Custom Formatters.md"
+        "docs/Getting Started.md",
+        "docs/Custom Formatters.md"
       ]
     ]
   end
