@@ -12,7 +12,7 @@ This package can be installed by adding `humanize_time` to your list of dependen
 ```elixir
 def deps do
   [
-    {:humanize_time, "~> 0.1.0"}
+    {:humanize_time, "~> 1.0.0"}
   ]
 end
 ```

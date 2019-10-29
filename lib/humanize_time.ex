@@ -36,8 +36,9 @@ defmodule HumanizeTime do
       seconds: 0
     }
 
-    calculate_times(initial_acc, seconds)
+    calculate_times(initial_acc, abs(seconds))
     |> print_duration(opts[:formatters])
+    |> handle_negative_printing(seconds)
   end
 
   @spec calculate_times(duration_map(), integer()) :: duration_map()
@@ -139,6 +140,13 @@ defmodule HumanizeTime do
   @spec print_seconds(integer()) :: String.t()
   defp print_seconds(0), do: ""
   defp print_seconds(duration), do: "#{duration} sec"
+
+  @spec handle_negative_printing(integer(), integer()) :: String.t()
+  defp handle_negative_printing(output, original_seconds) when original_seconds < 0 do
+    "-#{output}"
+  end
+
+  defp handle_negative_printing(output, _), do: output
 
   defp default_formatters do
     %{
