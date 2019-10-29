@@ -3,7 +3,7 @@
 ## Description
 HumanizeTime is an Elixir library for converting seconds and milliseconds into more human readable strings. It allows for custom formatting and flexibility.  
 
-[Hex Docs](https://hexdocs.pm/humanize_time) (in progress).
+[Hex Docs](https://hexdocs.pm/humanize_time)
 
 ## Installation
 
@@ -66,5 +66,6 @@ opts = [
 # No current data.
 ```
 
-
+## Contributing
+Contributions are welcome! Submit a pull request if you would like to contribute.
 
