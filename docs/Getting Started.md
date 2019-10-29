@@ -8,6 +8,6 @@ To use Humanize Time with your projects, edit your `mix.exs` file and add it as 
 
 ```elixir
 defp deps do
-  [{:humanize_time, "~> 1.0.1"}]
+  [{:humanize_time, "~> 1.0"}]
 end
 ```
