@@ -19,6 +19,7 @@ defmodule HumanizeTime do
   """
   @spec format_seconds(integer() | float(), keyword()) :: String.t()
   def format_seconds(seconds, opts \\ [])
+  def format_seconds(nil, nil_fallback: nil_fallback), do: nil_fallback
   def format_seconds(nil, _), do: ""
 
   def format_seconds(seconds, opts) when is_float(seconds) do

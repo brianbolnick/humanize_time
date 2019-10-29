@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.1
+
+* Provide option for default fallback if input is nil
+
 ## v1.0.0
 
 * Hanldling for negative input and first initial release

@@ -97,10 +97,15 @@ defmodule HumanizeTimeTest do
       assert res == "21 hourz 16 min"
     end
   end
-    test "handles negative input" do
-      res = HumanizeTime.format_seconds(-4321)
-      assert res == "-1 hr 12 min"
-    end
 
+  test "handles negative input" do
+    res = HumanizeTime.format_seconds(-4321)
+    assert res == "-1 hr 12 min"
+  end
 
+  test "handles nil fallback when provided" do
+    opts = [nil_fallback: "--"]
+    res = HumanizeTime.format_seconds(nil, opts)
+    assert res == "--"
+  end
 end
