@@ -44,7 +44,8 @@ defmodule HumanizeTime.MixProject do
       extras: [
         "CHANGELOG.md",
         "docs/Getting Started.md",
-        "docs/Custom Formatters.md"
+        "docs/Custom Formatters.md",
+        "docs/Handling Nil.md"
       ]
     ]
   end

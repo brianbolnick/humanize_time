@@ -29,9 +29,10 @@ Currently, all formats are fixed and will show a maximum of 2 time periods.
 ```
 
 ## Custom Formatter
-`format_seconds` takes an optional keyword list of options. Currently, the only supported keyword is `:formatters`.  
+`format_seconds` takes an optional keyword list of options.
 
 **:formatters** 
+
 Allows for custom formatting of the result string. Value must be a map containing `days`, `hours`, `minutes`, and/or `seconds` as keys, with an anonymous function as value.
 Default values will replace missing or incorrect keys.
 
@@ -46,8 +47,24 @@ opts = [
   }
 ]
 
-# 21 D 17 H
-# 19 M 37 S
+> HumanizeTime.format_seconds(23487, opts)
+# 6 M 31 M
 ```
+
+**:nil_fallback**
+
+If input is nil, `nil_fallback` allows you to set a default/fallback value. 
+
+Example:
+```elixir
+opts = [
+	nil_fallback: "No current data.
+]
+
+> HumanizeTime.format_seconds(nil, opts)
+
+# No current data.
+```
+
 
 
